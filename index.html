@@ -1,53 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
+function show(abc){
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator Muhammad Shahbaz</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+var show = document.getElementById("mainInput");
+show.value += abc
 
-<body>
-     <div class="container">
+}
 
-     <!-- <span>Muhammad Shahbaz Ali</span> -->
+function reasult(){
 
-        <div class="maininput">
+    var reasult = document.getElementById("mainInput");
+    reasult.value = eval(reasult.value)
+    
 
-            <input disabled type="text" class="input"  id="mainInput">
-            <!-- <button class="copy" onclick="valueCopy() ">C <br> O <br> P <br> Y <br></button> -->
-        </div>
+}
+function clearReasult(){
 
-        <div class="mainbtn">
-            <button onclick="clearReasult()" class="btn back clear">C</button>
-            <button onclick="parcantage()" class="btn clear">%</button>
-            <button onclick="show('(')" class="btn">(</button>
-            <button onclick="show(')')" class="btn">)</button>
-            <button onclick="backup()" class="btn back clear">AC</button>
-            <button onclick="show('00')" class="btn clear">00</button>
-            <button onclick="duble()" class="btn">X <sup>2</sup> </button>
-            <button onclick="show('*')" class="btn">X</button>
-            <button onclick="show('7')" class="btn">7</button>
-            <button onclick="show('8')" class="btn">8</button>
-            <button onclick="show('9')" class="btn">9</button>
-            <button onclick="show('/')" class="btn">/</button>
-            <button onclick="show('4')" class="btn">4</button>
-            <button onclick="show('5')" class="btn">5</button>
-            <button onclick="show('6')" class="btn">6</button>
-            <button onclick="show('-')" class="btn">-</button>
-            <button onclick="show('1')" class="btn">1</button>
-            <button onclick="show('2')" class="btn">2</button>
-            <button onclick="show('3')" class="btn">3</button>
-            <button onclick="show('+')" class="btn">+</button>
-            <button onclick="location.reload()" class="btn back"><img src="image/back.png" alt=""></button>
-            <button onclick="show('0')" class="btn">0</button>
-            <button onclick="show('.')" class="btn">.</button>
-            <button onclick="reasult()" class="btn sucess">=</button>
-        </div>
-    </div> 
+    var clearReasult = document.getElementById("mainInput");
+    clearReasult.value = ""
+     
 
-    <script src="app.js"></script>
-</body>
+}
 
-</html>
+function valueCopy() {
+    var valueCopy = document.getElementById("mainInput");
+    valueCopy.select();
+    valueCopy.setSelectionRange(0, 99)
+    document.execCommand("copy");
+    alert("Copied: " + valueCopy.value);
+  }
+
+
+
+function backup() {
+    var backup = document.getElementById("mainInput");
+    backup.value = backup.value.slice(0,-1)
+    
+}
+
+function duble() {
+    var duble = document.getElementById("mainInput");
+    duble.value = duble.value*2
+    
+}
+function duble() {
+    var duble = document.getElementById("mainInput");
+    duble.value = duble.value*2
+    
+}
+
+function parcantage(){
+
+var parcantage = document.getElementById("mainInput");
+parcantage.value = parcantage.value*100/500
+
+}
+
+function zakat(){
+
+    var zakat = document.getElementById("mainInput");
+    zakat.value = zakat.value/100*2.5
+}
+
+
+
+
+
