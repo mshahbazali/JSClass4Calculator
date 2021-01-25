@@ -54,6 +54,12 @@ parcantage.value = parcantage.value*100/500
 
 }
 
+function zakat(){
+
+    var zakat = document.getElementById("mainInput");
+    zakat.value = zakat.value/100*2.5
+}
+
 
 
 
